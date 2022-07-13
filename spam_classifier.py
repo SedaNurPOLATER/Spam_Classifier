@@ -1,12 +1,8 @@
-**İstenmeyen E-posta olarak adlandırılan spamların artışı daha güvenilir ve sağlam antispam filtrelerinin geliştirilmesine yönelik yoğun bir ihtiyaç yarattı. Gelen kutumuza düşen promosyon mesajları veya reklamlar, herhangi bir değer sağlamadıkları ve genellikle bizi rahatsız ettikleri için spam olarak sınıflandırılabilir.**
-
-Bu çalışmada UCI'nin Machine Learning Repository'sinden elde edilen veriler kullanılacaktır.
-
-*İlk olarak gerekli paketleri içe aktardık.*
+# İstenmeyen E-posta olarak adlandırılan spamların artışı daha güvenilir ve sağlam antispam filtrelerinin geliştirilmesine yönelik yoğun bir ihtiyaç yarattı. 
+# Gelen kutumuza düşen promosyon mesajları veya reklamlar, herhangi bir değer sağlamadıkları ve genellikle bizi rahatsız ettikleri için spam olarak sınıflandırılabilir.
+# Bu çalışmada UCI'nin Machine Learning Repository'sinden elde edilen veriler kullanılacaktır.
+# İlk olarak gerekli paketleri içe aktardık.
 """
-
-# Commented out IPython magic to ensure Python compatibility.
-# %matplotlib inline
 import matplotlib.pyplot as plt
 import csv
 import sklearn
@@ -20,7 +16,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import GridSearchCV,train_test_split,StratifiedKFold,cross_val_score,learning_curve
 
-"""Colab'da istediğimiz dosyaları **files.upload()** şeklinde tanımlayabiliriz."""
+""" Colab'da istediğimiz dosyaları **files.upload()** şeklinde tanımlayabiliriz. """
 
 from google.colab import files
 uploaded = files.upload()
@@ -46,7 +42,6 @@ for val in data[data['Label'] == 'spam'].EmailText:
     for words in tokens:
         spam_words = spam_words + words + ' '
 
-# Creating a corpus of ham messages
 for val in data[data['Label'] == 'ham'].EmailText:
     EmailText = EmailText.lower()
     tokens = nltk.word_tokenize(EmailText)
@@ -110,7 +105,6 @@ print(vocab[:60])
 
 vocab_size = len(vocab)
 word2idx = {}
-#print vocab_size
 for i, word in enumerate(vocab):
     word2idx[word] = i
 
@@ -158,7 +152,6 @@ rfc = RandomForestClassifier(n_estimators=31, random_state=111)
 
 clfs = {'SVC' : svc,'KN' : knc, 'NB': mnb, 'DT': dtc, 'LR': lrc, 'RF': rfc}
 
-#fit the data onto the models
 def train(clf, features, targets):
     clf.fit(features, targets)
 
@@ -189,7 +182,6 @@ find(x)
 
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
-# Naive Bayes
 y_pred_nb = mnb.predict(X_test)
 y_true_nb = y_test
 cm = confusion_matrix(y_true_nb, y_pred_nb)
