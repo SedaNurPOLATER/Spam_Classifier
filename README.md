@@ -2,7 +2,9 @@
 
 İstenmeyen e-posta olarak adlandırılan spamların hacmindeki artış, daha güvenilir ve sağlam antispam filtrelerinin geliştirilmesine yönelik yoğun bir ihtiyaç yarattı. Gelen kutumuza düşen promosyon mesajları veya reklamlar, herhangi bir değer sağlamadıkları ve genellikle bizi rahatsız ettikleri için spam olarak sınıflandırılabilir.
 
-Bu aşamada hangi mesajları Spam olarak adlandırıyor hangi mesajları Spam Değil olarak adlandırıyoruz buna bakacağız.
+Bu aşamada hangi mesajları 'Spam' olarak adlandırıyor hangi mesajları 'Spam Değil' olarak adlandırıyoruz buna bakacağız.
+
+# 
 
 Yardım aldığım kaynakları da inceleyebilirsiniz.
 
