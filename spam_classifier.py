@@ -2,7 +2,7 @@
 # Gelen kutumuza düşen promosyon mesajları veya reklamlar, herhangi bir değer sağlamadıkları ve genellikle bizi rahatsız ettikleri için spam olarak sınıflandırılabilir.
 # Bu çalışmada UCI'nin Machine Learning Repository'sinden elde edilen veriler kullanılacaktır.
 # İlk olarak gerekli paketleri içe aktardık.
-"""
+
 import matplotlib.pyplot as plt
 import csv
 import sklearn
